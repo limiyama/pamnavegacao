@@ -13,32 +13,18 @@ export default function Mongagua() {
   
   }
 
-  function limpar(){
-    setDados("");
-  } 
   return (
     <View style={styles.container}>
 
-      <View style={styles.blocos}>
+      <View style={styles.bloco}>
         <TouchableOpacity
-        style={styles.btn}
+        style={styles.botao}
         onPress={carregaDados}
         >
-          <Text style={styles.btnTexto}>BUSCAR</Text>
+          <Text style={styles.btnTexto}>Procurar Previsão</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity
-        style={styles.btn}
-        onPress={limpar}
-        >
-          <Text style={styles.btnTexto}>LIMPAR</Text>
-        </TouchableOpacity>
-
       </View>
       
-        {/**
-         * <Tempo  data={dados}/>
-         */}
         <FlatList
           data={dados}
           renderItem={({item}) => {
@@ -69,49 +55,26 @@ const styles = StyleSheet.create({
     marginLeft: '10%',
     marginBottom: 10
   },
-  textoTitulo: {
-    fontSize: 40,
-    textAlign: 'center',
-    color: '#0073FA',
-  },
-  header: {
-    margin: 50
-  },
-  imgg:{
-    width: 320,
-    height: 190,
-    margin: 5,
-    borderRadius: 20,
-  },
-  imgs: {
-    alignItems: 'center',
-  },
-  blocos: {
+  bloco: {
     fontSize: 20,
-  },
-  texto: {
-    color: '#4281F5',
-    fontSize: 20,
-    marginTop: '4%',
-    textAlign: 'center'
   },
   input: {
     borderBottomWidth: 2,
     width: 265,
     height: 35,
     fontSize: 20,
-    borderColor: '#4281F5'
+    borderColor: '#F7BBEE'
   },
-  btn: {
+  botao: {
     width: 265,
     height: 45,
-    backgroundColor: '#0073FA',
+    backgroundColor: '#F7BBEE',
     alignItems: 'center',
     margin: 10,
     borderRadius: 5,
   },
   btnTexto: {
     fontSize: 30,
-    color: '#FFF'
+    color: '#000'
   }
 });

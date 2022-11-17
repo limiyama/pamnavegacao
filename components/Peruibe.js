@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, FlatList } 
 import Api from './Api';
 
 
-export default function Santos() {
+export default function Peruibe() {
   const [dados, setDados] = useState("");
 
   const [cidade, setCidade] = useState('Peruibe')
@@ -13,18 +13,15 @@ export default function Santos() {
   
   }
 
-  function limpar(){
-    setDados("");
-  } 
   return (
     <View style={styles.container}>
 
-      <View style={styles.blocos}>
+      <View style={styles.bloco}>
         <TouchableOpacity
-        style={styles.btn}
+        style={styles.botao}
         onPress={carregaDados}
         >
-          <Text style={styles.btnTexto}>BUSCAR</Text>
+          <Text style={styles.btnTexto}>Procurar Previsão</Text>
         </TouchableOpacity>
 
       </View>
@@ -48,59 +45,36 @@ export default function Santos() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFF',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  tempo:{
-    marginLeft: '10%',
-    marginBottom: 10
-  },
-  textoTitulo: {
-    fontSize: 40,
-    textAlign: 'center',
-    color: '#1B613D',
-  },
-  header: {
-    margin: 50
-  },
-  imgg:{
-    width: 320,
-    height: 190,
-    margin: 5,
-    borderRadius: 20,
-  },
-  imgs: {
-    alignItems: 'center',
-  },
-  blocos: {
-    fontSize: 20,
-  },
-  texto: {
-    color: '#4281F5',
-    fontSize: 20,
-    marginTop: '4%',
-    textAlign: 'center'
-  },
-  input: {
-    borderBottomWidth: 2,
-    width: 265,
-    height: 35,
-    fontSize: 20,
-    borderColor: '#4281F5'
-  },
-  btn: {
-    width: 265,
-    height: 45,
-    backgroundColor: '#1B613D',
-    alignItems: 'center',
-    margin: 10,
-    borderRadius: 5,
-  },
-  btnTexto: {
-    fontSize: 30,
-    color: '#FFF'
-  }
-});
+    container: {
+      flex: 1,
+      backgroundColor: '#FFF',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    tempo:{
+      marginLeft: '10%',
+      marginBottom: 10
+    },
+    bloco: {
+      fontSize: 20,
+    },
+    input: {
+      borderBottomWidth: 2,
+      width: 265,
+      height: 35,
+      fontSize: 20,
+      borderColor: '#F7BBEE'
+    },
+    botao: {
+      width: 265,
+      height: 45,
+      backgroundColor: '#F7BBEE',
+      alignItems: 'center',
+      margin: 10,
+      borderRadius: 5,
+    },
+    btnTexto: {
+      fontSize: 30,
+      color: '#000'
+    }
+  });

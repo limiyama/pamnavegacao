@@ -43,14 +43,14 @@ const styles = StyleSheet.create({
     },
     botao:{
         marginTop:20,
-        backgroundColor:'#000',
+        backgroundColor:'#F7BBEE',
         width:'80%',
         marginLeft:'10%',
         padding: 8
     },
     txtBotao:{
         fontSize:20,
-        color:'#FFF',
+        color:'#000',
         textAlign:'center'
     }
 })
