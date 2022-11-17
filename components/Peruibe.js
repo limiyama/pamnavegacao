@@ -3,10 +3,10 @@ import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, FlatList } 
 import Api from './Api';
 
 
-export default function Mongagua() {
+export default function Santos() {
   const [dados, setDados] = useState("");
 
-  const [cidade, setCidade] = useState('Mongagua')
+  const [cidade, setCidade] = useState('Peruibe')
   async function carregaDados(){
     const response = await Api.get(`weather?array_limit=2&fields=only_results,temp,city_name,forecast,max,min,date,description&key=a1fd3a9c&city_name=${cidade},SP`)
     setDados(response.data.forecast);
@@ -27,18 +27,7 @@ export default function Mongagua() {
           <Text style={styles.btnTexto}>BUSCAR</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
-        style={styles.btn}
-        onPress={limpar}
-        >
-          <Text style={styles.btnTexto}>LIMPAR</Text>
-        </TouchableOpacity>
-
       </View>
-      
-        {/**
-         * <Tempo  data={dados}/>
-         */}
         <FlatList
           data={dados}
           renderItem={({item}) => {
@@ -72,7 +61,7 @@ const styles = StyleSheet.create({
   textoTitulo: {
     fontSize: 40,
     textAlign: 'center',
-    color: '#0073FA',
+    color: '#1B613D',
   },
   header: {
     margin: 50
@@ -105,7 +94,7 @@ const styles = StyleSheet.create({
   btn: {
     width: 265,
     height: 45,
-    backgroundColor: '#0073FA',
+    backgroundColor: '#1B613D',
     alignItems: 'center',
     margin: 10,
     borderRadius: 5,

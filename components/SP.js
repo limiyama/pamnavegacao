@@ -3,10 +3,10 @@ import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, FlatList } 
 import Api from './Api';
 
 
-export default function Mongagua() {
+export default function SP() {
   const [dados, setDados] = useState("");
 
-  const [cidade, setCidade] = useState('Mongagua')
+  const [cidade, setCidade] = useState('Sao Paulo')
   async function carregaDados(){
     const response = await Api.get(`weather?array_limit=2&fields=only_results,temp,city_name,forecast,max,min,date,description&key=a1fd3a9c&city_name=${cidade},SP`)
     setDados(response.data.forecast);
@@ -18,6 +18,17 @@ export default function Mongagua() {
   } 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.textoTitulo}>PREVISÃO DO TEMPO SÃO PAULO</Text>
+        <View style={styles.imgs}>
+        <Image
+      style={styles.imgg}
+      source={{
+        uri: 'https://viagemeturismo.abril.com.br/wp-content/uploads/2017/12/istock-842960000.jpg',
+      }}
+      />
+      </View>
+      </View>
 
       <View style={styles.blocos}>
         <TouchableOpacity
@@ -72,7 +83,7 @@ const styles = StyleSheet.create({
   textoTitulo: {
     fontSize: 40,
     textAlign: 'center',
-    color: '#0073FA',
+    color: '#983AE0',
   },
   header: {
     margin: 50
@@ -105,7 +116,7 @@ const styles = StyleSheet.create({
   btn: {
     width: 265,
     height: 45,
-    backgroundColor: '#0073FA',
+    backgroundColor: '#983AE0',
     alignItems: 'center',
     margin: 10,
     borderRadius: 5,
