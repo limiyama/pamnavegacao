@@ -35,15 +35,17 @@ export default function Home({navigation}) {
 
 const styles = StyleSheet.create({
     bloco:{
-        marginTop:30
+        backgroundColor: '#fafafa',
+        height:'100%'
     },
     texto:{
+        marginTop:30,
         fontSize:30,
         textAlign:'center'
     },
     botao:{
         marginTop:20,
-        backgroundColor:'#F7BBEE',
+        backgroundColor:'#ecbcfd',
         width:'80%',
         marginLeft:'10%',
         padding: 8
